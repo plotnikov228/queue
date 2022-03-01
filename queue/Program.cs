@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +21,11 @@ namespace queue
             myQ.Enqueue(3);
             myQ.Enqueue(5);
             myQ.Enqueue(8);
+            
             Console.WriteLine("Ввод S: ");
             myQ.Enqueue(s = Console.Read());
-            Console.WriteLine("myQ");
+            Console.WriteLine(" ");
+            
             Console.WriteLine("\tРазмер:    {0}", myQ.Count);
             n = myQ.Count;
             Console.Write("\tСписок:");
@@ -34,10 +36,11 @@ namespace queue
             int min = (int)array.Min();
             int max = (int)array.Max();
 
+            Console.Write("\tОтсортированный Список:");
             var result = array.OrderBy(t=>t);
-            foreach (int data in result) ;
+            foreach (int t in result) Console.Write("    {0}", t);
+            Console.Write(" ");
 
-            PrintValues(array);
 
             var indexMin = Array.IndexOf(array, min);
             var indexMax = Array.IndexOf(array, max);
